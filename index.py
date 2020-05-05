@@ -50,10 +50,6 @@ nat_em = plot_event(airlines, '2020-03-11')
 sp_bill = plot_event(airlines, '2020-03-27')
 tot_auth = plot_event(airlines, '2020-04-13')
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
 
 
 app.layout = html.Div([
