@@ -61,6 +61,10 @@ app.layout = html.Div([
         ),
     ], color="#4e455d", dark=True, fixed='top'),
     html.H4('Airline stocks on the NYSE closing price since 2017', style={'margin-top': '15vh', 'textAlign':'center'}),
+    html.Div([
+        html.P('Click on ticker on right side of graph to show/hide line'),
+        html.P('Double-click to isolate line')
+    ], style={'border': '2px solid #4e455d', 'text-align':'center','padding': '15px 10px 5px 10px', 'margin':'30px auto 0 auto', 'background-color':'#82d8d8', 'max-width':'30vw', 'border-radius': '10px'}),
     dcc.Graph(
         id='airline-graph',
         figure = fig
