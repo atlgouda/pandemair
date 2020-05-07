@@ -10,11 +10,21 @@ from dash.dependencies import Input, Output
 import os
 import dash_bootstrap_components as dbc
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], meta_tags=[
+    # A description of the app, used by e.g.
+    # search engines when displaying search results.
+    {
+        'name': 'PandemAir',
+        'content': 'Airline Stock Tracker during Covid-19'
+    },
+    {
+        'property':'og:image',
+        'content':'https://i.imgur.com/vcPgyva.png'
+    }])
 server = app.server
 
 airlines = ['ALK', 'AVH', 'AZUL', 'CEA', 'ZNH', 'VLRS', 'DAL', 'GOL', 'LTM', 'LUV', 'SAVE']
-al_data = yf.download("ALK AVH AZUL CEA ZNH VLRS DAL GOL LTM LUV SAVE", start="2017-01-01", end="2021-05-03")
+al_data = yf.download("ALK AVH AZUL CEA ZNH VLRS DAL GOL LTM LUV SAVE", start="2020-01-01", end="2023-05-03")
 df = pd.DataFrame(data=al_data)
 acdf = df['Adj Close']
 fig = go.Figure()
@@ -47,6 +57,8 @@ def plot_event(event_date):
         }
     } 
 
+
+
 app.layout = html.Div([
     dbc.Navbar([
         html.A(
@@ -60,7 +72,7 @@ app.layout = html.Div([
             href="http://pandemair.herokuapp.com/",
         ),
     ], color="#4e455d", dark=True, fixed='top'),
-    html.H4('Airline stocks on the NYSE closing price since 2017', style={'margin-top': '15vh', 'textAlign':'center'}),
+    html.H4('Airline stocks on the NYSE adj close since beginning of 2020', style={'margin-top': '15vh', 'textAlign':'center'}),
     html.Div([
         html.P('Click on ticker on right side of graph to show/hide line'),
         html.P('Double-click to isolate line')
