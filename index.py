@@ -14,11 +14,19 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], meta_tags=[
     # A description of the app, used by e.g.
     # search engines when displaying search results.
     {
-        'name': 'description',
+        'property': 'og:description',
         'content': 'Airline Stock Tracker during Covid-19'
     },
+        {
+        'property': 'og:title',
+        'content': 'Pandemic Airlines'
+    },
     {
-        'name':'og:image',
+        'property': 'og:url',
+        'content': 'http://pandemair.herokuapp.com/'
+    },
+    {
+        'property':'og:image',
         'content':'https://i.imgur.com/vcPgyva.png'
     }])
 server = app.server
