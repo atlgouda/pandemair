@@ -14,11 +14,11 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], meta_tags=[
     # A description of the app, used by e.g.
     # search engines when displaying search results.
     {
-        'name': 'PandemAir',
+        'name': 'description',
         'content': 'Airline Stock Tracker during Covid-19'
     },
     {
-        'property':'og:image',
+        'name':'og:image',
         'content':'https://i.imgur.com/vcPgyva.png'
     }])
 server = app.server
