@@ -14,18 +14,22 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], meta_tags=[
     # A description of the app, used by e.g.
     # search engines when displaying search results.
     {
+        'prefix': "og: http://ogp.me/ns#",
         'property': 'og:description',
         'content': 'Airline Stock Tracker during Covid-19'
     },
         {
+        'prefix': "og: http://ogp.me/ns#",
         'property': 'og:title',
         'content': 'Pandemic Airlines'
     },
     {
+        'prefix': "og: http://ogp.me/ns#",
         'property': 'og:url',
         'content': '//pandemair.herokuapp.com/'
     },
     {
+        'prefix': "og: http://ogp.me/ns#",
         'property':'og:image',
         'content':'//i.imgur.com/vcPgyva.png?3'
     }])
