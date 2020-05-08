@@ -23,11 +23,11 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], meta_tags=[
     },
     {
         'property': 'og:url',
-        'content': 'http://pandemair.herokuapp.com/'
+        'content': '//pandemair.herokuapp.com/'
     },
     {
         'property':'og:image',
-        'content':'https://i.imgur.com/vcPgyva.png'
+        'content':'//i.imgur.com/vcPgyva.png?3'
     }])
 server = app.server
 
