@@ -14,3 +14,5 @@ Dash is a great tool to use when showing data visualization, especially when use
 
 
 Take a look at my site to see how responsive graphs can be from a client-side perspective when coded with Dash.
+
+## Deployed to : http://pandemair.herokuapp.com/
