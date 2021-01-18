@@ -31,7 +31,7 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY], meta_tags=[
     {
         'prefix': "og: http://ogp.me/ns#",
         'property':'og:image',
-        'content':'//i.imgur.com/vcPgyva.png?3'
+        'content':'//i.imgur.com/ddnsfpH.png?1'
     }])
 server = app.server
 
